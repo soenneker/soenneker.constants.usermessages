@@ -11,7 +11,7 @@
 
     <PropertyGroup>
         <Description>Various constants for displaying to users</Description>
-        <Version Condition="'$(BUILD_VERSION)' == ''">3.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Constants.UserMessages</AssemblyName>
         <PackageId>Soenneker.Constants.UserMessages</PackageId>
