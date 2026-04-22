@@ -1,11 +1,10 @@
-﻿using Soenneker.Tests.Unit;
-using Xunit;
+using Soenneker.Tests.Unit;
 
 namespace Soenneker.Constants.UserMessages.Tests;
 
 public sealed class UserMessagesTests : UnitTest
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
