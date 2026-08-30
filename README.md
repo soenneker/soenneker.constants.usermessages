@@ -5,7 +5,7 @@
 
 # Soenneker.Constants.UserMessages
 
-Various constants for displaying to users.
+Provides neutral English title/detail pairs for common request failures.
 
 ## Install
 
@@ -13,6 +13,26 @@ Various constants for displaying to users.
 dotnet add package Soenneker.Constants.UserMessages
 ```
 
-## What you get
+## Messages
 
-- `UserMessages` — Various constants for displaying to users.
+| Scenario | Title | Detail |
+| --- | --- | --- |
+| Unexpected failure | `Something went wrong` | `We couldn't complete your request. Please try again.` |
+| Cancellation | `Request canceled` | `The request was canceled before it could complete.` |
+| Timeout | `Request timeout` | `The request took too long to complete.` |
+
+## Usage
+
+```csharp
+using Soenneker.Constants.UserMessages;
+
+return OperationResult.Fail(
+    UserMessages.TimeoutTitle,
+    UserMessages.TimeoutDetail);
+```
+
+The messages are intentionally generic and do not expose exception text or implementation details. Keep diagnostic information in server-side logs rather than appending it to these user-facing values.
+
+These constants are English-only and are not a localization system. Applications with localized UI should map the failure scenarios to their own resources.
+
+Because these are compile-time constants, their values are embedded into consuming assemblies. Rebuild consumers after upgrading if message text changes.

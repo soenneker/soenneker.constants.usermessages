@@ -1,34 +1,34 @@
 ﻿namespace Soenneker.Constants.UserMessages;
 
 /// <summary>
-/// Various constants for displaying to users
+/// Provides neutral user-facing messages for common request failures.
 /// </summary>
 public static class UserMessages
 {
     /// <summary>
-    /// The something went wrong title.
+    /// The title for an unexpected failure.
     /// </summary>
     public const string SomethingWentWrongTitle = "Something went wrong";
     /// <summary>
-    /// The something went wrong detail.
+    /// The detail for an unexpected failure.
     /// </summary>
     public const string SomethingWentWrongDetail = "We couldn't complete your request. Please try again.";
 
     /// <summary>
-    /// The request canceled title.
+    /// The title for a canceled request.
     /// </summary>
     public const string RequestCanceledTitle = "Request canceled";
     /// <summary>
-    /// The request canceled detail.
+    /// The detail for a canceled request.
     /// </summary>
     public const string RequestCanceledDetail = "The request was canceled before it could complete.";
 
     /// <summary>
-    /// The timeout title.
+    /// The title for a request timeout.
     /// </summary>
     public const string TimeoutTitle = "Request timeout";
     /// <summary>
-    /// The timeout detail.
+    /// The detail for a request timeout.
     /// </summary>
     public const string TimeoutDetail = "The request took too long to complete.";
 }
